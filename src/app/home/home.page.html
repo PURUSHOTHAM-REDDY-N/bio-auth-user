@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      User
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -22,16 +22,13 @@
 
 <!--  <ion-button class="mt-8" (click)="printCurrentPosition()">Get Current Co-ordinates</ion-button>-->
 
-  <div>
-  <ion-label>Latitude : {{position.coords.latitude}}</ion-label>
+  <div class="container">
+
+    <ion-button (click)="checkIn()">Check IN</ion-button>
+    <ion-button (click)="checkOut()">Check Out</ion-button>
+<!--  <ion-button (click)="performBiometricVerificatin()">perform verification</ion-button>-->
+  <ion-button (click)="goToUserDetails()">Dashboard</ion-button>
     <br>
-  <ion-label>Longitude : {{position.coords.longitude}}</ion-label>
-  </div>
-  <div id="container">
-  <ion-button (click)="performBiometricVerificatin()">perform verification</ion-button>
-  <ion-button (click)="checkAvailable()">check availability</ion-button>
-    <br>
-    <ion-label class="">{{biometricType}}</ion-label>
   </div>
 
   <div *ngIf="authentication">
